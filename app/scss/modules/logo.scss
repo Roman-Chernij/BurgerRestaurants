@@ -1,0 +1,27 @@
+.logo {
+
+  &-inner {
+    margin: 0;
+  }
+
+  &-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &-value {
+    font: 66px/1 $primary-font-bold;
+    text-transform: lowercase;
+    color: #fff;
+    padding-left: 30px;
+
+    &__decor {
+      font-family: $chiller-regular;
+    }
+  }
+}

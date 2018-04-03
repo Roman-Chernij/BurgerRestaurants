@@ -1,0 +1,352 @@
+.banner {
+  background-color: $primary-color;
+  padding: 170px 0 26px;
+  position: relative;
+
+  &-toolbar {
+    background-color: $primary-color2;
+    width: 77px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &-list {
+      padding-top: 4px;
+
+      &-inner {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        &.active {
+
+          .banner-toolbar-list__icon {
+            background-position-x: 100%;
+          }
+
+          .banner-toolbar-list__title {
+            color: #fff;
+            font-weight: 600;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+
+          .banner-toolbar-list__icon {
+            background-position-x: 100%;
+          }
+
+          .banner-toolbar-list__title {
+            color: #fff;
+            font-weight: 600;
+          }
+        }
+      }
+
+      &__item {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 24px 0;
+      }
+
+      &__icon {
+        width: 35px;
+        height: 35px;
+        background-image: url($urlImage + 'banner-icon.png');
+
+        &_pizza {}
+
+        &_burgers {
+          background-position-y: -44px;
+        }
+
+        &_salads {
+          background-position-y: -87px;
+        }
+
+        &_tacos {
+          background-position-y: -132px;
+        }
+
+        &_wraps {
+          background-position-y: -178px;
+        }
+
+        &_fries {
+          background-position-y: -226px;
+        }
+
+        &_drinks {
+          background-position-y: -274px;
+        }
+      }
+
+      &__title {
+        position: absolute;
+        top: 50%;
+        left: 128%;
+        font-size: 16px;
+        font-family: 'Open Sans', sans-serif;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &-holder {
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &-slider {
+
+    &.slider-pizza,
+    &.slider-burgers,
+    &.slider-salads,
+    &.slider-tacos,
+    &.slider-wraps,
+    &.slider-fries,
+    &.slider-drinks {
+      display: none;
+    }
+
+    &.active {
+      display: block;
+    }
+
+    &-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform:translate(-50%,-50%) skew(-1deg,-12deg);
+      width: 100%;
+
+      &__limit {
+        font: 30px/1.5 $primary-font-regular;
+        color: #fff;
+        display: block;
+        position: relative;
+        padding: 0 100px;
+
+        &::before,
+        &::after {
+          content: '';
+          display: block;
+          height: 1px;
+          width: 125px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: #fff;
+        }
+
+        &:before{
+          left: 0;
+        }
+
+        &::after {
+          right: 0;
+        }
+
+      }
+
+      &__title {
+        font: 144px/1 $primary-font-bold;
+        color: #fff;
+        margin:0;
+      }
+
+      &__sub-title {
+        font: 82px/1.5 $primary-font-light;
+        color: #fff;
+        margin-top: -10px;
+        padding: 0 76px;
+        display: block;
+        position: relative;
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 3px;
+          background-image: url(../images/decor-line.png);
+        }
+      }
+    }
+
+    &__image {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__item {
+      position: relative;
+      padding-bottom: 66px;
+
+      &:focus {
+        outline:none;
+      }
+    }
+
+    .slick-dots {
+      display: flex;
+      position: absolute;
+      bottom: -13px;
+      right: -256px;
+
+      li {
+        padding: 0 9px;
+      }
+
+      .slick-active {
+
+        button {
+          width: 35px;
+          background-color: $primary-color2;
+          border-radius: 10px;
+        }
+      }
+
+      button {
+        width: 10px;
+        height: 10px;
+        font-size: 0;
+        border-radius: 10px;
+        border:none;
+        background-color: #fff;
+        transition: ease-in-out background-color .3s, ease-in-out width .3s;
+      }
+    }
+  }
+}
+
+
+/* Slider */
+.slick-slider
+{
+  position: relative;
+
+  display: block;
+  box-sizing: border-box;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+  position: relative;
+
+  display: block;
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus
+{
+  outline: none;
+}
+.slick-list.dragging
+{
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+  position: relative;
+  top: 0;
+  left: 0;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+  display: table;
+
+  content: '';
+}
+.slick-track:after
+{
+  clear: both;
+}
+.slick-loading .slick-track
+{
+  visibility: hidden;
+}
+
+.slick-slide
+{
+  display: none;
+  float: left;
+
+  height: 100%;
+  min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+  float: right;
+}
+.slick-slide img
+{
+  display: block;
+}
+.slick-slide.slick-loading img
+{
+  display: none;
+}
+.slick-slide.dragging img
+{
+  pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+  display: block;
+}
+.slick-loading .slick-slide
+{
+  visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+  display: block;
+
+  height: auto;
+
+  border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+  display: none;
+}
