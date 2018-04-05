@@ -34,6 +34,10 @@
 
         @media #{$laptopPoint} { @content; }
 
+    } @else if $media == $laptopX {
+
+      @media #{$laptopXPoint} { @content; }
+
     }
 }
 

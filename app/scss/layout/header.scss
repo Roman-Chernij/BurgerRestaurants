@@ -7,6 +7,7 @@
 
   &-row {
     display: flex;
+    flex-wrap: wrap;
     position: relative;
     padding-bottom: 17px;
 
@@ -48,6 +49,31 @@
       top: 50%;
       left: 23px;
       transform: translateY(-50%);
+    }
+  }
+
+  @include breakpoint($laptopX) {
+
+    &-row {
+      flex-direction: column;
+
+      .col {
+        width: 100% !important;
+      }
+    }
+
+    &-inner {
+      justify-content: center;
+    }
+  }
+
+  @include breakpoint($mobile) {
+
+    &-inner {
+
+      .btn-row {
+        display: none;
+      }
     }
 
   }

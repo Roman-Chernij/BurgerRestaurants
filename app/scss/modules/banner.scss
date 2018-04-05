@@ -10,6 +10,7 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 2;
 
     &-list {
       padding-top: 4px;
@@ -135,6 +136,8 @@
         position: relative;
         padding: 0 100px;
 
+        @include gateway (15, 30);
+
         &::before,
         &::after {
           content: '';
@@ -161,6 +164,8 @@
         font: 144px/1 $primary-font-bold;
         color: #fff;
         margin:0;
+
+        @include gateway (60, 144);
       }
 
       &__sub-title {
@@ -170,6 +175,8 @@
         padding: 0 76px;
         display: block;
         position: relative;
+
+        @include gateway (35, 82);
 
         &::after {
           content: '';
@@ -228,8 +235,52 @@
       }
     }
   }
-}
 
+  @include breakpoint($laptopX) {
+
+    padding: 215px 0 26px;
+
+    .slick-dots {
+      bottom: -36px;
+      left: 50%;
+      right: inherit;
+      transform: translateX(-50%);
+    }
+  }
+
+  @include breakpoint($laptop) {
+
+    &-toolbar {
+
+      &-list {
+        padding-bottom: 15px;
+
+        &__item {
+          padding: 24px 0 0;
+        }
+
+        &-inner {
+          padding-bottom: 28px;
+        }
+
+        &__title {
+          top:inherit;
+          bottom: -7px;
+          left: 50%;
+          transform: translateX(-50%);
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+  @include breakpoint($tablet) {
+
+    &-toolbar {
+     top:55%;
+    }
+  }
+}
 
 /* Slider */
 .slick-slider

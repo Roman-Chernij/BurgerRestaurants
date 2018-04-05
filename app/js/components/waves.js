@@ -49,6 +49,7 @@
         }
 
         return style;
+
     }
 
     var Effect = {
@@ -208,6 +209,8 @@
                     // Put element as child
                     parent.replaceChild(wrapper, el);
                     wrapper.appendChild(el);
+
+
                 }
             }
         }

@@ -1,14 +1,101 @@
 .trendy-deals {
+  padding: 60px 0 94px;
 
   &-holder {
-    padding-top: 211px;
     position: relative;
+    overflow: hidden;
+    display: block;
+
+    &:focus {
+      outline: none;
+    }
+
+    &_large {
+      padding-bottom: 86px;
+
+      .trendy-deals-holder__title {
+        font-size: 80px;
+        text-transform: uppercase;
+      }
+
+      &:hover {
+
+        .trendy-deals-holder__offer {
+          background-color: $primary-color;
+          color: #000;
+        }
+
+        .trendy-deals-holder__offer-price {
+          background-color: $primary-color2;
+        }
+      }
+    }
+
+    &_small {
+
+      &-type1 {
+        padding: 47px 26px 0 50%;
+        background-color: $primary-color;
+
+        .trendy-deals-holder__image {
+          z-index: 0;
+          left: 24%;
+        }
+      }
+    }
+
 
     &__image {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+
+    &__title {
+      color: #fff;
+      font-family: $primary-font-bold;
+      margin: 0;
+      padding: 0 30px;
+    }
+
+    &__subtitle {}
+
+    &__offer {
+      color: $primary-color;
+      background-color: $primary-color2;
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      padding: 7px 15px 7px 30px;
+      transition: ease-in-out background-color .3s, ease-in-out color .3s ;
+    }
+
+    &__offer-price {
+      width: 75px;
+      height: 75px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: $primary-color;
+      position: absolute;
+      top: 20px;
+      right: 21px;
+      font-family: $chiller-regular;
+      font-size: 24px;
+      color: #fff;
+      padding: 5px;
+      transition: ease-in-out background-color .3s;
+
+      span {
+        display: block;
+        text-align: center;
+        font-family: 'Alex Brush', cursive;
+        font-size: 20px;
+        line-height: 1;
+      }
     }
   }
 }

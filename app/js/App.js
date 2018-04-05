@@ -8,7 +8,15 @@ window.addEventListener( "DOMContentLoaded", function() {
 		parentAttr: 'data-parent',
 		slider: 'data-slider',
 		defaultActive: 1
-	})
+	});
+
+    addMobiNav({
+		parent: '.header-inner',
+		cloneElem: ['.nav-list', '.btn-row'],
+		mobiWrapClass: 'mobi-nav'
+	});
 });
+
+window.addEventListener('load', loadPage);
 
 

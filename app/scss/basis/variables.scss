@@ -3,6 +3,7 @@ $mobile:  767;
 $tabletM: 992;
 $tablet:  1023;
 $laptop:  1440;
+$laptopX:  1600;
 
 $widthvalue:'max-width';
 
@@ -11,6 +12,7 @@ $mobilePoint:  (#{$widthvalue} : #{$mobile}px);
 $tabletMPoint: (#{$widthvalue} : #{$tabletM}px);
 $tabletPoint:  (#{$widthvalue} : #{$tablet}px);
 $laptopPoint:  (#{$widthvalue} : #{$laptop}px);
+$laptopXPoint:  (#{$widthvalue} : #{$laptopX}px);
 
 
 $urlFont:'../fonts';

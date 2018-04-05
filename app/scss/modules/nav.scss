@@ -2,6 +2,7 @@
   box-shadow: none;
   display: flex;
   justify-content: center;
+  width: auto;
 
   &-list {
     display: flex;
@@ -47,5 +48,10 @@
         }
       }
     }
+  }
+
+  @include breakpoint($mobile) {
+
+    display: none;
   }
 }
