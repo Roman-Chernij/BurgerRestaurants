@@ -2,6 +2,7 @@
   background-color: $primary-color;
   padding: 170px 0 26px;
   position: relative;
+  min-height: 100vh;
 
   &-toolbar {
     background-color: $primary-color2;

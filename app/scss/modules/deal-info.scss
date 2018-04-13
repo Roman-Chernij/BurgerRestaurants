@@ -1,4 +1,149 @@
 .deal-info {
+  padding: 92px 0 70px;
 
-  &-holder {}
+  .row {
+    margin-bottom: 0;
+  }
+
+  &-holder {
+    display: flex;
+    padding-top: 16px;
+
+    &-price {
+      min-width: 240px;
+      padding-right: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      &__item {
+        font: 200px/1 $primary-font-bold;
+        color: $primary-color;
+        margin-bottom:20px;
+        width: 100%;
+
+        @include gateway (100, 200, 1300);
+
+        sup {
+          font-size: 124px;
+          vertical-align: inherit;
+
+          @include gateway (60, 124, 1300);
+        }
+      }
+
+      &__btn {
+        background-color: $primary-color2;
+        color: #fff;
+        width: 95%;
+        padding: 15px 15px;
+        text-align: center;
+        border-radius: 4px;
+        text-transform: capitalize;
+
+        &:hover {
+          background-color: lighten($primary-color2, 10%);
+        }
+
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    &-details {
+      padding: 17px 0 0;
+
+      &__title {
+        font: 85px/1 $primary-font-bold;
+        text-transform: uppercase;
+        color: #fff;
+        margin: 0;
+        position: relative;
+
+        @include gateway (45, 85);
+
+        &_decor {
+          font: 37px/1 $DancingScriptBold;
+          color: $primary-color;
+          position: absolute;
+          bottom: -6px;
+          right: -89px;
+          transform: skew(17deg,-16deg);
+
+          @include gateway (17, 37);
+
+          &:after {
+            content: '';
+            position: absolute;
+            right: -11px;
+            bottom: -31px;
+            transform: skew(-5deg,16deg);
+            background-image: url('../images/decor-line2.png');
+            width: 122px;
+            height: 37px;
+            display: block;
+            pointer-events: none;
+          }
+        }
+      }
+
+      &__subtitle {
+        font: 16px/1.5 $primary-font-light;
+        color: #fff;
+      }
+    }
+  }
+
+  @include breakpoint($tabletM) {
+    padding: 50px 0;
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    &-holder {
+      flex-direction: column;
+      align-items: center;
+
+      &-details {
+
+        &__title {
+          text-align: center;
+        }
+      }
+
+      &-price {
+
+        &__item {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  @include breakpoint($mobile) {
+
+    padding: 50px 0;
+
+    &-holder {
+
+      &-details {
+
+        &__title {
+          padding-bottom: 55px;
+
+          &_decor {
+            right: inherit;
+            left: 50%;
+            bottom:19px;
+            transform: translateX(-50%) skew(0,0);
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,13 @@
+.heading {
+  font:50px/1 $primary-font-bold;
+  color: $heading;
+  text-align: center;
+  margin: 0;
+
+  &__under-title {
+    font:26px/1 $DancingScriptBold;
+    color: $underHeading;
+    display: block;
+    padding-top: 20px;
+  }
+}
