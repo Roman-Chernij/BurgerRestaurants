@@ -2,14 +2,29 @@
   padding: 102px 0 50px;
 
   &-grid {
+  	display: flex;
+  	flex: wrap;
+    margin: 0 -15px;
 
-    &__item {}
+    &__item {
+        width: 33.33%;
+        padding: 0 15px;
+    }
   }
 
   &-holder {
+  	border:1px solid $primary-color;
 
     &__image {}
 
-    &-description {}
+    &-description {
+
+        &__title {
+            margin: 0;
+            font-size: 21px;
+            font-family: 'Open Sans', sans-serif;
+            text-transform: capitalize;
+        }
+    }
   }
 }
